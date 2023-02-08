@@ -1,0 +1,332 @@
+@import "./../assets/vars";
+@import "./../assets/keyframes";
+@import "./../modules/nav.scss";
+
+// BREAKPOINT LAPTOP
+@media (max-width: $ss_laptop) {
+	.container{
+		max-width: 880px;
+	}
+	.wrapper{
+		font-size: 16px;
+	}
+	.nav {
+		&__item + &__item {
+			margin-left: 40px;
+		}
+	}
+	.home-first-screen__title{
+		font-size: 40px;
+	}
+	.titled-image-card{
+		&__image-wrapper{
+			width: 50%;
+		}
+	}
+	.title{
+		&--short{
+			&, &-mb{
+				margin-bottom: 15px;
+			}
+		}
+	}
+	.key-values__content {
+		padding: 0 45px 0 0;
+	}
+	.first-screen{
+		background-position: -200px 0;
+		&--culture{
+			background-position: 0 0;
+		}
+		&__text{
+			font-size: 44px;
+		}
+	}
+	.role-model__img-wrapper{ 
+		width: 32%;
+	}
+}
+
+// BREAKPOINT TABLET
+@media (max-width: $ss_tablet) {
+	.wrapper{
+		font-size: 15px;
+	}
+	.container{
+		padding: 0 15px;
+	}
+	.title{
+		&--long{
+			&, &-mb{
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	@include nav-module($color_primary, #fff);
+	.nav {
+		display: flex;
+		flex-direction: column;
+		z-index: 3;
+		&__item {
+			color: #fff !important;
+			& + & {
+				margin-left: 0;
+			}
+			&--site{
+				display: none;
+			}
+			&--mob{
+				display: block;
+			}
+		}
+	}
+	.home-first-screen{
+		min-height: 450px;
+		&__title{
+			font-size: 30px;
+			padding-top: 350px;
+		}
+	}
+	.titled-image-card{
+		justify-content: center;
+		& + &{
+			margin-top: 60px;
+		}
+		&__content{
+			width: 100%;
+			order: 1;
+		}
+		&__image-wrapper{
+			padding-top: 30px;
+			width: 100%;
+			order: 2;
+		}
+	}
+	.key-values{
+		&__content {
+			width: 100%;
+			padding: 0px 45px 22px 25px;
+		}
+		&__content:nth-child(4) {
+			padding-bottom: 50px;
+		}
+		&__title {
+			font-weight: 600;
+			margin-bottom: 10px;
+		}
+		&__img-wrapper {
+			width: 100%;
+			text-align: center;
+		}
+	}
+	.card-slider-arrows {
+		margin-top: 20px;
+	}
+	.first-screen{
+		min-height: 400px;
+		background-position: -200px 0;
+		&__text{
+			font-size: 38px;
+			padding-top: 150px;
+		}
+		&--culture{
+			background-position: 0 0;
+		}
+	}
+	.numbers{ 
+		&__inner{
+			justify-content: space-around;
+		}
+		&__item{
+			width: 40%;
+		}
+		&__numb{
+			font-size: 25px;
+			padding-bottom: 0;
+		}
+		&__text{
+			margin-top: 14px;
+		}
+	}
+	.values{
+		&__inner{
+			justify-content: space-around;
+		}
+		&__item{
+			width: 50%;
+		}
+
+		&__item:nth-child(3),
+		&__item:nth-child(4),
+		&__item:nth-child(5){
+			margin-top: 30px;
+			width: 33%;
+		}
+	}
+	.culture{
+		&__inner{
+			justify-content: center;
+		}
+		&__img-wrapper{
+			width: 100%;
+			order: 2;
+			margin-top: 30px;
+		}
+		&__content{
+			order: 1;
+			width: 90%;
+		}
+	}
+	.results{
+		&__card{
+			height: 180px;
+			padding: 20px;
+		}
+	}
+	.role-model{ 
+		&__inner{
+			justify-content: center;
+		}
+		&__img-wrapper{ 
+			width: 47%;
+		}
+		&__img-wrapper:nth-child(2){ 
+			margin-left: 30px;
+		}
+		&__img-wrapper:nth-child(3){ 
+			margin-top: 30px;
+		}
+	}
+}
+// BREAKPOINT SM TABLET
+@media (max-width: $ss_sm_tablet) {
+	.wrapper{
+		font-size: 14px;
+	}
+	.vacancies-map{
+		&, &-city{
+			display: none;
+		}
+		&__container{
+			width: 280px;
+			margin: 0 auto;
+			display: block;
+		}
+		&-select{
+			&, &__label{
+				display: block;
+			}
+		}
+	}
+	.home-first-screen{
+		min-height: 360px;
+		&__title{
+			font-size: 24px;
+			padding-top: 280px;
+		}
+	}
+	.first-screen{
+		min-height: 270px;
+		background-position: -150px 0;
+		&__text{
+			font-size: 24px;
+			padding-top: 100px;
+		}
+		&--culture{
+			background-position: 0 0;
+		}
+	}
+	.mission{
+		&__item{
+			width: 48%;
+		}
+		&__item:nth-child(3),
+		&__item:nth-child(4){
+			margin-top: 30px;
+		}
+	}
+	.role-model{ 
+		&__img-wrapper{ 
+			width: 100%;
+			text-align: center;
+		}
+		&__img-wrapper:nth-child(2){ 
+			margin: 30px 0 0;
+		}
+		&__img-wrapper:nth-child(3){ 
+			margin-top: 30px;
+		}
+	}
+}
+
+// BREAKPOINT PHONE
+@media (max-width: $ss_phone) {
+	.wrapper{
+		width: calc(100% + 30px);
+		margin: 0 -15px;
+	}
+	.home-first-screen{
+		min-height: 300px;
+		&__title{
+			font-size: 16px;
+			padding-top: 240px;
+		}
+	}
+	.card-slider-arrows {
+		margin-top: 10px;
+	}
+	.numbers{
+		&__item{
+			width: 60%;
+		}
+	}
+	.mission{
+		&__inner{
+			justify-content: center;
+		}
+		&__img-wrapper{
+			order: 2;
+		}
+		&__item{
+			width: 80%;
+		}
+		&__text{
+			order: 1;
+		}
+	}
+	.values{
+		&__inner{
+			justify-content: center;
+		}
+		&__item{
+			width: 100%;
+		}
+		&__item + &__item{
+			margin-top: 20px;
+		}
+		&__item:nth-child(3),
+		&__item:nth-child(4),
+		&__item:nth-child(5){
+			width: 100%;
+		}
+	}
+	.culture{
+		&__text p {
+			padding-left: 25px;
+		}
+	}
+	.results{
+		&__inner{
+			justify-content: center;
+		}
+		&__card{
+			width: 80%;
+			text-align: center;
+			height: 150px;
+		}
+		&__card + &__card{
+			margin-top: 20px;
+		}
+	}
+}

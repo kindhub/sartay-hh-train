@@ -1,0 +1,238 @@
+extends ./pug/layout
+
+block content
+	<!-- START HEADER -->
+	.section.header
+		.container
+			.header__inner
+				a.header__logo.content-tab.content-tab--active(href="#home")
+					img.header__logo-img(src="images/logo.svg" alt="")
+				.header__nav.nav
+					a.nav__item.content-tab(href="#company-numbers") Цифры компании
+					a.nav__item.content-tab(href="#mission") Миссия компании
+					a.nav__item.content-tab(href="#culture") Корпоративная культура
+					a.nav__item(href="https://k7group.kz/" target='_blank') k7group.kz
+				+nav-btn
+	<!-- END HEADER -->
+	<!-- START HOME CONTENT -->
+	.content.content--active.content--opacity-1.content__home
+		<!-- START HOME FIRST SCREEN -->
+		.section.home-first-screen 
+			.container
+				.home-first-screen__inner  
+					.home-first-screen__title Болашағыңызды бізбен қалаңыз! <br> Стройте своё будущее с нами!
+		<!-- END HOME FIRST SCREEN -->
+		<!-- START TITLE IMAGE CARD -->
+		.section.title-image-cards.section--long-pt 
+			.container 
+				.title-image-cards__inner 
+					+titled-image-card('images/title-image-card/1.jpg', 'История компании', 'Строительный холдинг К7 GROUP — лидер рынка недвижимости Западного Казахстана на протяжении 6 лет. Создан в Мангистауской Области, городе Актау в 2006 году. На сегодняшний день K7 GROUP ведет строительство в четырех городах: Алматы, Актау, Атырау и Актобе. За свою 6-летнюю историю K7 GROUP успешно завершил внушительное число строительных проектов – как собственных, так и сторонних и благодаря этому спас более 1000 дольщиков других компаний потерпевших банкротство.', isReverse=false)
+					+titled-image-card('images/title-image-card/2.jpg', 'Наши достижения', 'Имидж компании, высокое качество строительства, особая ответственность при сдаче объектов, развитые связи с партнерами и продуманный подход к развитию бизнеса позволил компании стать крупнейшим застройщиком Западного Казахстана и войти в ТОП-3 строительных компаний Казахстана (по количеству жилых комплексов в продаже). Земельный банк компании во всех регионах присутствия насчитывает порядка 1 млн кв.м. K7 GROUP реализует проекты полного цикла - от разработки концепции до ввода законченного строительством объекта в эксплуатацию. Строительный холдинг выполняет функции инвестора, застройщика, заказчика и генерального подрядчика.', isReverse=true)
+					+titled-image-card('images/title-image-card/3.jpg', 'Наша миссия', 'Наша приоритетная задача – создание комфортного жилья для каждого. Миссия K7 GROUP проста, но неизменна уже 6 лет: «Мы строим будущее!». Наши специалисты постоянно работают над развитием комфортного пространства дворов, улучшением качества домов и увеличением энергоэффективности построенных зданий. Сегодня в жилые комплексы активно внедряются системы SMART FLAT, позволяющие жильцам полностью обезопасить себя и своих близких, настроить идеальный микроклимат дома.', isReverse=false)
+		<!-- END TITLE IMAGE CARD -->
+		<!-- START KEY VALUES -->
+		.srction.key-values.section--long-pt
+			.title.title--long-mb.title--centered Ключевые ценности
+			.swiper-container.card-slider(data-arrow-prev=".tmpl-hh__card-slider-arrow-prev" data-arrow-next=".tmpl-hh__card-slider-arrow-next")
+				.swiper-wrapper
+					.swiper-slide.slider-card-slide
+						.key-values__content
+							.key-values__title Развитие и только развитие
+							.key-values__text Мы высоко ценим развитие во всех областях нашей деятельности. Мы постоянно внедряем, изучаем и следим за всеми трендами и новейшими технологиями в мире строительства. Именно это позволяет нам быть одними из лучших в нашей сфере. Постоянное стремление к улучшению качества и достижение лучших результатов, стало в нашей компании неотъемлемым хобби.
+						.key-values__img-wrapper 
+							img.key-values__img(src="images/key-values/1.jpg", alt="")
+					.swiper-slide.slider-card-slide
+						.key-values__content
+							.key-values__title Прозрачные отношения
+							.key-values__text Строительство домов от К7 GROUP базируется на многолетнем доверии граждан, поэтому самое важное для нас — выполнять обещания по срокам и качеству исполнения работ. Мы понимаем какую ответственность несём и делаем все возможное для того чтобы не потерять доверие людей к нам. На сегодняшний день более 10 000 семей доверили строительство своего дома именно нам.
+						.key-values__img-wrapper 
+							img.key-values__img(src="images/key-values/2.jpg", alt="")
+					.swiper-slide.slider-card-slide
+						.key-values__content
+							.key-values__title Клиентоориентированность
+							.key-values__text Самым главным приоритетом нашей деятельности неоспоримо являются потребности клиентов. Все сотрудники взаимодействующие с нашими клиентами - ключевое звено бизнеса. Мы всегда рады способствовать счастью и комфорту наших клиентов и именно поэтому мы занимаемся постоянным улучшением качества своих услуг.
+						.key-values__img-wrapper 
+							img.key-values__img(src="images/key-values/3.jpg", alt="")
+					.swiper-slide.slider-card-slide
+						.key-values__content
+							.key-values__title Результативность
+							.key-values__text Работать не для процесса, а для достижения новых вершин, направленных на развитие.
+						.key-values__img-wrapper 
+							img.key-values__img(src="images/key-values/4.jpg", alt="")
+					.swiper-slide.slider-card-slide
+						.key-values__content
+							.key-values__title Высокоэффективность
+							.key-values__text Основной принцип нашей компании – эффективности во всем. Максимальная отдача, достижение результата любыми способами, оперативность – главные векторы нашей деятельности с целью получения конкурентных преимуществ на рынке.
+						.key-values__img-wrapper 
+							img.key-values__img(src="images/key-values/5.jpg", alt="")
+				.slider-arrows.card-slider-arrows
+					.slider-arrow.slider-arrow--prev.card-slider-arrow-prev
+						+icon("left-arrow", "slider-arrow__icon")
+					.slider-arrow.slider-arrow--next.card-slider-arrow-next
+						+icon("right-arrow", "slider-arrow__icon")
+		<!-- END KEY VALUES -->
+	<!-- END HOME CONTENT -->
+	<!-- START COMPANY NUMBERS CONTENT -->
+	.content.content__company-numbers
+		<!-- START NUMBER FIRST SCREEN -->
+		.section.first-screen.first-screen--numbers 
+			.container 
+				.first-screen__inner 
+					.first-screen__text ЦИФРЫ <br><span>компании</span>
+		<!-- END NUMBER FIRST SCREEN -->
+		<!-- START COUNTER -->
+		.section.numbers.section--long-pt
+			.container 
+				.title.title--long-mb.title--centered Компания в цифрах
+				.numbers__inner 
+					.numbers__item
+						.countup(data-value='4') 0
+						.numbers__text филиала компании
+					.numbers__item
+						.countup.countup--without-separate(data-value='6') 0
+						.numbers__text лет опыта работы
+					.numbers__item
+						.countup.countup--without-separate(data-value='10000') 0 <span>+</span>
+						.numbers__text счастливых семей
+					.numbers__item
+						.countup.countup--without-separate(data-value='1000000') 0 
+						.numbers__text м2, введеных в эксплуатацию
+		<!-- END COUNTER -->
+	<!-- END COMPANY NUMBERS CONTENT -->
+
+	<!-- START MISSION CONTENT -->
+	.content.content__mission
+		<!-- START MISSION FIRST SCREEN -->
+		.section.first-screen.first-screen--mission 
+			.container 
+				.first-screen__inner 
+					.first-screen__text Миссия <br><span>компании</span>
+		<!-- END MISSION FIRST SCREEN -->
+		<!-- START COMPANY MISSION -->
+		.section.section--long-pt.mission 
+			.container 
+				.title.title--long-mb.title--centered МИССИЯ КОМПАНИИ
+				.mission__inner 
+					.mission__item 
+						.mission__img-wrapper 
+							img.mission__img(src="images/mission/mission-1.jpg", alt="")
+						.mission__text 
+							p Компания развивается комплексно и всесторонне, понимая важность и ценность личностного и профессионального развития каждого сотрудника в коллективе
+					.mission__item 
+						.mission__img-wrapper 
+							img.mission__img(src="images/mission/mission-2.jpg", alt="")
+						.mission__text 
+							p K7 Group обеспечивает казахстанцев доступным и качественным жильём. К 2028 году каждый 10-й казахстанец живёт в квартире, построенной нашей компанией.
+					.mission__item 
+						.mission__img-wrapper 
+							img.mission__img(src="images/mission/mission-3.jpg", alt="")
+						.mission__text 
+							p Компания задаёт тенденции на рынке, внедряя передовые технологии строительства и предлагая новые решения актуальным запросам потребителя
+					.mission__item 
+						.mission__img-wrapper 
+							img.mission__img(src="images/mission/mission-4.jpg", alt="")
+						.mission__text 
+							p Мы являемся организаторами социальных проектов и регулярно проводим эко-инициативы — по озеленению городов, восстановлению лесов, очищению гор и водоёмов от следов жизнедеятельности человека
+		<!-- END COMPANY MISSION -->
+	<!-- END MISSION CONTENT -->
+	
+	<!-- START CULTURE CONTENT -->
+	.content.content__culture
+		<!-- START CULTURE FIRST SCREEN -->
+		.section.first-screen.first-screen--culture 
+			.container 
+				.first-screen__inner 
+					.first-screen__text Корпоративная <br><span>культура</span>
+		<!-- END CULTURE FIRST SCREEN -->
+		<!-- START VALUES -->
+		.section.section--long-pt.values  
+			.container 
+				.title.title--long-mb.title--centered Ценности
+				.values__inner 
+					.values__item
+						.values__img-wrapper 
+							img.values__img(src="images/culture/values-1.svg", alt="")
+						.values__text 
+							p Честность и порядочность
+					.values__item
+						.values__img-wrapper 
+							img.values__img(src="images/culture/values-2.svg", alt="")
+						.values__text 
+							p Инициативность и ответственность
+					.values__item
+						.values__img-wrapper 
+							img.values__img(src="images/culture/values-3.svg", alt="")
+						.values__text 
+							p Доброжелательность и взаимоуважение
+					.values__item
+						.values__img-wrapper 
+							img.values__img(src="images/culture/values-4.svg", alt="")
+						.values__text 
+							p Вовлеченность и целеустремлённость
+					.values__item
+						.values__img-wrapper 
+							img.values__img(src="images/culture/values-5.svg", alt="")
+						.values__text 
+							p Непрерывное стремление к росту и развитию
+		<!-- END VALUES -->
+		<!-- START CULTURE -->
+		.section.section--long-pt.culture  
+			.container 
+				.culture__inner 
+					.culture__img-wrapper 
+						img.culture__img(src="images/culture/culture-img.jpg", alt="")
+					.culture__content 	
+						.title.title--short-mb Культура
+						.culture__text 
+							p Командный дух и взаимопомощь
+							p Ответственность за результат
+							p Креатив и самосовершенствование
+		<!-- END CULTURE -->
+		<!-- START  -->
+		.section.section--long-pt.results
+			.container 
+				.title.title--long-mb.title--centered Фокус на результат
+				.results__inner 
+					.results__card 
+						.results__img-wrapper 
+							img.results__img(src="images/culture/results-1.svg", alt="")
+						.results__text 
+							p Боевой дух и стремление к цели 
+					.results__card 
+						.results__img-wrapper 
+							img.results__img(src="images/culture/results-2.svg", alt="")
+						.results__text 
+							p Активная жизненная позиция 
+					.results__card 
+						.results__img-wrapper 
+							img.results__img(src="images/culture/results-3.svg", alt="")
+						.results__text 
+							p Cмелость и уверенность в своих действиях
+		<!-- END  -->
+		<!-- START ROLE MODEL -->
+		.section.section--long-pt.role-model  
+			.container 
+				.title.title--long-mb.title--centered Ролевая модель
+				.role-model__inner
+					.role-model__img-wrapper 
+						img.role-model__img(src="images/culture/model-1.jpg", alt="")
+					.role-model__img-wrapper 
+						img.role-model__img(src="images/culture/model-2.jpg", alt="")
+					.role-model__img-wrapper 
+						img.role-model__img(src="images/culture/model-3.jpg", alt="")
+		<!-- END ROLE MODEL -->
+		<!-- START LOOK FOR -->
+		.section.title-image-cards.section--long-pt 
+			.container 
+				.title-image-cards__inner 
+					+titled-image-card('images/culture/look-for.jpg', 'КОГО МЫ ИЩЕМ', 'Мы будем рады видеть в команде того, кто поддерживает и разделяет эти ценности. Кто не боится идти в новый опыт, самостоятельно искать и находить нестандартные подходы и решения, структурировать свою работу и уделять время своему саморазвитию — прочтению книг, просмотру обучающих видео, тренингов и семинаров. Если это ты — нам точно по пути!', isReverse=false)
+		<!-- END LOOK FOR -->
+	<!-- END CULTURE CONTENT -->
+
+	<!-- START SECTION MAP -->
+	.section.section--long-pt.s-map
+		.container
+			.title.title--long-mb.title--centered География вакансий
+			.s-map__inner 
+				include ./map
+	<!-- END SECTION MAP -->
